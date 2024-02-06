@@ -1,0 +1,504 @@
+/*  
+    Some parts in this stylesheet have been made with the assistance of
+    Chat-GPT, W3Schools and other sources which will be provided in the 
+    respective area                           
+*/
+body{
+    padding: 0;
+    margin: 0;
+    width:100vw;
+    /*background: linear-gradient(180deg, #FFFFFF 17.38%, rgba(84, 113, 121, 0.09) 71.88%, rgba(224, 106, 50, 0.05) 100%);*/
+}
+
+main{
+    width: 100vw;
+}
+
+
+/*==========================NAV============================*/
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    margin: 0;
+    position: fixed;
+    z-index: 2;
+}
+
+/* The hamburger menu code is from:
+    https://code-boxx.com/simple-responsive-pure-css-hamburger-menu/
+    and has been adjusted and changed to fit my website although a 
+    few elements remain the same */
+
+#hamnav {
+    width: 100%;
+    background: #000000;
+  }
+  
+  /* (B) HORIZONTAL MENU ITEMS */
+#hamitems { display: flex; }
+#hamitems a {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-top: 10px;
+    padding: 15px;
+    color:#ffa631;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+  }
+#hamitems a:hover { 
+    background: #225dff;
+    color: #E5E5E5;
+}
+  
+  /* (C) HIDE HAMBURGER */
+  #hamnav label, #hamburger { display: none; }
+
+/*-------------------------------------------------------*/
+
+/*=====================HOME SECTION======================*/
+
+#heading{
+    display: block;
+    width: 60%;
+    text-align: left;
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    color: #F1F2F2;
+}
+
+#sub-heading{
+    display: block;
+    text-align: left;
+    position: absolute;
+    top: 85%;
+    color: #F1F2F2;
+    width: 100%;
+}
+
+.contact-button{
+    display: block;
+    background: #2A2A2A;
+    color: #F1F2F2;
+    top: 90%;
+    width: 100%;
+    left: 10%;
+    margin-top: 2.5rem;
+    transform: translate(-50%, -50%);
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    gap: 0.6rem; /* Adjust for spacing between buttons */
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+}
+
+#view:hover, #about-button:hover{
+    background-color: #ffa631;
+    animation: ease-in;
+    transition: transform 0.2s ease-in-out;
+    color:#E5E5E5;
+}
+
+
+#view:active{
+    color: #E5E5E5;
+    background-color: #2A2A2A;
+}
+
+#about-button:active{
+    color: #2A2A2A;
+    background-color: #E5E5E5;
+}
+
+
+
+:hover.link{
+    color: #225dff;;
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+:active.link{
+    color: #E5E5E5;
+    transform: scale(100%);
+    animation: ease-in;
+}
+
+#video1{
+    padding: 0;
+    margin: 0 auto;
+    height: 54rem;
+    width: 100vw;
+    object-fit: cover;
+    object-position: 50% 50%;
+    opacity: 100%;
+    animation: infinite;
+    border-radius: 0;
+}
+
+
+#home{
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0;
+    display: flex;
+}
+
+
+img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+/*------------Container Heading Span Tags------------*/
+.container-title{
+    padding: 5px 10px;
+    text-align:center;
+    margin: 0 auto;
+    background-color: #225dff;
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 5px 0px 0px 5px;
+    font-family: 'Signika Negative', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+}
+
+.container-subheading{
+    padding: 5px 10px;
+    font-family: 'Signika Negative', sans-serif;
+    left: 10px;
+    color: #5c5c5c;
+    font-size: 18px;
+    border-radius: 0px 5px 5px 0px;;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+}
+
+
+#showreel-container{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+
+
+/*============================#current/ Recent on Main page============================*/
+/*  SOME AREAS of the code in this section was AI assissted and 
+    elemnets from W3Schools may have also been used   */
+
+#current{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 2rem;
+    text-align: center;
+    align-content: center;
+    animation: fade-in 2s ease-in-out forwards;
+    background-color: #ffa631;
+    background-image: url("../Images/icons.png");
+    background-size: 35%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.recent-content2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:0 auto;
+    height: 30rem;
+    align-content: center;
+    /*background-image: url(../Images/giraffe1.jpg);*/
+    background-size: cover; /* This will cover the entire element */
+    background-repeat: no-repeat; /* This will prevent the image from repeating */
+    background-position: 50% 50%; /* This centers the image in the element */
+    opacity: 1; /* 100% opacity */
+}
+
+.recent-content1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    height: 30rem;
+    align-content: center;
+    /*background-image: url(../Images/paper-3155438_1920.jpg);*/
+    background-size: cover; /* This will cover the entire element */
+    background-repeat: no-repeat; /* This will prevent the image from repeating */
+    background-position: 50% 50%; /* This centers the image in the element */
+    opacity: 1; /* 100% opacity */
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin: 0 auto;
+    width: 45%;
+    height: 26rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 5px;
+    box-shadow: 10 10 10 black;
+    background-color: rgba(247, 247, 247);
+    animation: fade-in 0.5s ease-in-out forwards;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.description-span{
+    padding: 5px 10px;
+    text-align:center;
+    margin: 2px;
+    background-color: #D5D5D5;
+    color: #2A2A2A;
+    border-radius: 5px 5px 5px 5px;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.description-span2{
+    padding: 5px 10px;
+    text-align:center;
+    margin: 2px;
+    background-color: #F1F1F1;
+    color: #333;
+    border-radius: 5px 5px 5px 5px;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    margin: 0 auto;
+    width: 18rem;
+}
+
+
+.text-wrap{
+    display: block;
+    justify-content: center;
+    padding: 0;
+    text-align: center; /* Add this line to ensure text is centered */
+}
+
+.text-wrap p {
+    text-align: center;
+    margin: 0 auto; /* This centers the paragraph if it has a specified width */
+    width: 70%; /* Ensure the paragraph takes the full width */
+}
+
+iframe{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 26rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.iframe-container{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.desc-video-container{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 36%;
+    height: 50%;
+}
+
+.desc-video-container, video{
+    border: none;
+    border-radius: 10px;
+}
+
+#logos1{
+    display: flex;
+    position: absolute;
+    left: 10%;
+    margin-top: 11%;
+    width: 50px;
+    box-shadow: none;
+}
+
+#logos1:hover{
+   transform: scale(150%);
+}
+
+#logos1::after{
+    transform: scale(100%);
+ }
+
+
+
+/*======================MEDIA QUERIES=========================*/    
+
+
+/*---------------------Max-Width 1000px for NAVIGATION----------------------*/
+
+@media screen and (max-width: 1000px){
+    #hamnav {
+        width: 100%;
+    }
+    
+    /* (A) BREAK INTO VERTICAL MENU */
+    #hamitems a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-top: 1px solid #333;
+    }
+    
+    /* (B) SHOW HAMBURGER ICON */
+    #hamnav label { 
+        display: inline-block; 
+        color: white;
+        background: #ffa631;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+    
+    /* (C) TOGGLE SHOW/HIDE MENU */
+    #hamitems { display: none; }
+    #hamnav input:checked ~ #hamitems { 
+        display: block; 
+        animation: fade-in 1s ease-in-out forwards;
+    }
+}
+
+
+
+/*---------------------Max-Width 1000px-----------------------*/
+@media screen and (max-width: 1000px){
+    #video1{
+        height: 40rem;
+    }
+
+    #heading{ 
+        display: flex;
+        flex-direction: column;
+        top: 6rem;
+    }
+
+    #button-container {
+        top: 30rem;
+    }
+
+    #current{
+        width: 100%; 
+    }
+
+    .recent-content2, .slider-content{
+        display: flex;
+        flex-direction: column-reverse;
+        height: 55rem;
+        width: 100%;
+
+    }
+
+    .recent-content1{
+        display: flex;
+        flex-direction: column;
+        height: 55rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .description, .slider-description{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        width: 100%;
+        height: 26rem;
+    }
+
+    .title{
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+
+    iframe{
+        width: 100%;
+        height: 30rem;
+    }
+
+}
+
+
+
+/*---------------------Max-Width 600px-----------------------*/
+@media screen and (max-width: 600px){
+
+    #home{
+        background-color: #2A2A2A;
+    }
+
+    
+    #button-container {
+        top: 30rem;
+        left: 40%;
+        margin-top: 0rem;
+    }
+
+
+    .recent-content2, .slider-content{
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        height: 50rem;
+        justify-content: center;
+    }
+
+    .recent-content1{
+        display: flex;
+        flex-direction: column;
+        height: 50rem;
+        margin-top: 0;
+        justify-content: center;
+    }
+
+    .description, .slider-description{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        width: 90%;
+        height: 28rem;
+    }
+
+    iframe{
+        width: 100%;
+        height: 15rem;
+    }
+
+    #current{
+        background-size: 80%;
+    }
+
+}
+
